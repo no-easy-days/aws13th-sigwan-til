@@ -1,0 +1,57 @@
+/* =================================================
+   m-callout – Balanced padding + Title lift
+   ================================================= */
+
+.callout[data-callout="m-callout"] {
+  --callout-color: transparent;
+  border: none;
+
+  background: rgba(0, 0, 0, 0.02);
+  border-radius: 10px;
+
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06), 0 4px 12px rgba(0, 0, 0, 0.04);
+
+  /* ✅ 위/아래 균형 맞춤 */
+  padding: 20px 20px;
+}
+
+/* 아이콘 제거 */
+.callout[data-callout="m-callout"] .callout-icon {
+  display: none;
+}
+
+/* 타이틀: 살짝 안쪽 + 5px 위로 */
+.callout[data-callout="m-callout"] .callout-title {
+  margin: 0 0 6px 6px;
+  padding: 0;
+  transform: translateY(-5px); /* ✅ 타이틀 5px 위로 */
+}
+
+.callout[data-callout="m-callout"] .callout-title-inner {
+  font-size: 0.95em;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+/* 본문: 더 안쪽 + 아래쪽 여백 제거 */
+.callout[data-callout="m-callout"] .callout-content {
+  font-size: 0.85em;
+  line-height: 1.55;
+
+  margin: 0 0 0 12px; /* ✅ 왼쪽만 인덴트 */
+  padding: 0;
+  text-align: left;
+}
+
+/* ✅ 빈 줄/첫 요소의 상단 여백 제거 (타이틀-본문 거리 안정) */
+.callout[data-callout="m-callout"] .callout-content > :first-child {
+  margin-top: 0 !important;
+}
+
+/* ✅ 마지막 요소 때문에 아래만 길어지는 현상 방지 */
+.callout[data-callout="m-callout"] .callout-content > :last-child {
+  margin-bottom: 0 !important;
+}
