@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "TIL/2025_12_24.md",
+                "file": "TIL/GIT - 버전 관리 시스템의 탄생과 진화.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2025_12_24"
+              "title": "GIT - 버전 관리 시스템의 탄생과 진화"
             }
           }
         ]
@@ -188,7 +188,7 @@
   "lastOpenFiles": [
     "템플릿/callout.md",
     "GIT.md",
-    "TIL/2025_12_24.md",
+    "TIL/GIT - 버전 관리 시스템의 탄생과 진화.md",
     "Global callout.css",
     "README.md",
     "템플릿",
