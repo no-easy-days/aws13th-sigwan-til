@@ -1,11 +1,13 @@
 /* =================================================
-   GLOBAL — 기본 콜아웃을 m-callout 스타일로 통일
+   GLOBAL — m-callout 느낌 유지 + GitHub 5종만(NOTE/TIP/IMPORTANT/WARNING/CAUTION)
+   NOTE는 회색(조금 더 진하게)
    ================================================= */
 
 .callout {
   --callout-color: transparent !important;
   border: none !important;
 
+  /* 기본(노말) 배경 */
   background: rgba(0, 0, 0, 0.02);
   border-radius: 10px;
 
@@ -54,75 +56,36 @@
 }
 
 /* =================================================
-   INFORMATION — 완전히 m-callout과 동일
-   (배경 변경 없음)
+   🌞 LIGHT MODE — GitHub 5종 톤 (NOTE는 회색)
    ================================================= */
 
-.callout[data-callout="info"],
-.callout[data-callout="information"] {
-  background: rgba(0, 0, 0, 0.02) !important;
+/* NOTE — 회색(기본보다 살짝 진하게) */
+.callout[data-callout="note"] {
+  background: rgba(0, 0, 0, 0.04) !important;
 }
 
-/* =================================================
-   OTHER TYPES — 기본 톤 (라이트 모드 기본값)
-   ================================================= */
-
-/* Tip / Success / Check - 기본 그룹 (나중에 Success/Check만 따로 오버라이드) */
-.callout[data-callout="tip"],
-.callout[data-callout="success"],
-.callout[data-callout="check"] {
-  background: rgba(46, 160, 67, 0.06) !important;
+/* TIP — GitHub 그린 느낌 */
+.callout[data-callout="tip"] {
+  background: rgba(46, 160, 67, 0.08) !important;
 }
 
-/* Warning / Caution - 기본 그룹 (나중에 Warning만 오버라이드) */
-.callout[data-callout="warning"],
-.callout[data-callout="caution"] {
-  background: rgba(255, 171, 0, 0.1) !important;
+/* IMPORTANT — GitHub 퍼플 느낌 */
+.callout[data-callout="important"] {
+  background: rgba(130, 80, 223, 0.1) !important;
 }
 
-/* Danger / Error - 기본 그룹 (나중에 Error만 오버라이드) */
-.callout[data-callout="danger"],
-.callout[data-callout="error"] {
-  background: rgba(255, 77, 77, 0.1) !important;
-}
-
-/* Note / Quote - 기본 그룹 (나중에 Quote만 오버라이드) */
-.callout[data-callout="note"],
-.callout[data-callout="quote"] {
-  background: rgba(0, 122, 255, 0.06) !important;
-}
-
-/* =================================================
-   🎨 LIGHT MODE — 지정한 콜아웃만 색상 튜닝
-   ================================================= */
-
-/* Success — 조금 더 선명한 그린 */
-.callout[data-callout="success"] {
-  background: rgba(18, 150, 105, 0.12) !important;
-}
-
-/* Check — 그린보다 약간 더 티얼 느낌 */
-.callout[data-callout="check"] {
-  background: rgba(0, 150, 136, 0.1) !important;
-}
-
-/* Warning — 살짝 더 밝은 앰버 톤 */
+/* WARNING — GitHub 앰버 느낌 */
 .callout[data-callout="warning"] {
-  background: rgba(255, 193, 7, 0.14) !important;
+  background: rgba(255, 171, 0, 0.12) !important;
 }
 
-/* Error — 코랄보다 살짝 딥한 레드 */
-.callout[data-callout="error"] {
-  background: rgba(244, 67, 54, 0.14) !important;
-}
-
-/* Quote — Note와 구분되는 라일락/퍼플 계열 */
-.callout[data-callout="quote"] {
-  background: rgba(156, 39, 176, 0.1) !important;
+/* CAUTION — GitHub 레드 느낌 */
+.callout[data-callout="caution"] {
+  background: rgba(207, 34, 46, 0.12) !important;
 }
 
 /* =================================================
-   🌙 DARK MODE — 다크일 때만 톤 조정
+   🌙 DARK MODE — GitHub 5종 톤 (NOTE는 회색)
    ================================================= */
 
 .theme-dark .callout {
@@ -130,60 +93,27 @@
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.45), 0 10px 24px rgba(0, 0, 0, 0.35);
 }
 
-/* Information — 뉴트럴 그레이 톤 */
-.theme-dark .callout[data-callout="info"],
-.theme-dark .callout[data-callout="information"] {
-  background: rgba(255, 255, 255, 0.06) !important;
+/* NOTE — 다크 회색(조금 더 진하게) */
+.theme-dark .callout[data-callout="note"] {
+  background: rgba(255, 255, 255, 0.08) !important;
 }
 
-/* Note / Quote — 기본값: 소프트 블루 (이후 Quote만 퍼플로 오버라이드) */
-.theme-dark .callout[data-callout="note"],
-.theme-dark .callout[data-callout="quote"] {
-  background: rgba(90, 150, 255, 0.14) !important;
+/* TIP — 다크 그린 */
+.theme-dark .callout[data-callout="tip"] {
+  background: rgba(90, 220, 150, 0.18) !important;
 }
 
-/* Tip / Success / Check — 기본값: 포레스트 민트 (이후 Success/Check 오버라이드) */
-.theme-dark .callout[data-callout="tip"],
-.theme-dark .callout[data-callout="success"],
-.theme-dark .callout[data-callout="check"] {
-  background: rgba(90, 220, 150, 0.16) !important;
+/* IMPORTANT — 다크 퍼플 */
+.theme-dark .callout[data-callout="important"] {
+  background: rgba(163, 113, 247, 0.2) !important;
 }
 
-/* Warning / Caution — 기본값: 소프트 오렌지 (이후 Warning만 오버라이드) */
-.theme-dark .callout[data-callout="warning"],
-.theme-dark .callout[data-callout="caution"] {
-  background: rgba(255, 190, 100, 0.18) !important;
-}
-
-/* Danger / Error — 기본값: 라이트 레드 (이후 Error만 오버라이드) */
-.theme-dark .callout[data-callout="danger"],
-.theme-dark .callout[data-callout="error"] {
-  background: rgba(255, 110, 130, 0.2) !important;
-}
-
-/* ---------- DARK MODE OVERRIDES (지정한 것만 변경) ---------- */
-
-/* Success — 좀 더 밝은 민트 그린 */
-.theme-dark .callout[data-callout="success"] {
-  background: rgba(64, 214, 155, 0.22) !important;
-}
-
-/* Check — 티얼 계열 네온 느낌 */
-.theme-dark .callout[data-callout="check"] {
-  background: rgba(0, 200, 170, 0.2) !important;
-}
-
-/* Warning — 살짝 더 골드에 가까운 앰버 */
+/* WARNING — 다크 앰버 */
 .theme-dark .callout[data-callout="warning"] {
-  background: rgba(255, 210, 120, 0.22) !important;
+  background: rgba(255, 210, 120, 0.2) !important;
 }
 
-/* Error — 한 톤 진한 라즈베리 레드 */
-.theme-dark .callout[data-callout="error"] {
-  background: rgba(255, 120, 150, 0.27) !important;
-}
-
-/* Quote — 블루에서 바이올렛 글로우 계열로 분리 */
-.theme-dark .callout[data-callout="quote"] {
-  background: rgba(190, 140, 255, 0.22) !important;
+/* CAUTION — 다크 레드 */
+.theme-dark .callout[data-callout="caution"] {
+  background: rgba(248, 81, 73, 0.22) !important;
 }

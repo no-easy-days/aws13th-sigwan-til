@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "2026.01/07.HTTP Header_Body.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "07.HTTP Header_Body"
             }
           }
         ]
@@ -174,20 +174,36 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "obsidian-git:Open Git source control": false,
       "switcher:빠른 전환기 열기": false,
       "graph:그래프 뷰 열기": false,
       "canvas:새 캔버스 만들기": false,
       "daily-notes:오늘의 일일 노트 열기": false,
       "templates:템플릿 삽입": false,
       "command-palette:명령어 팔레트 열기": false,
-      "bases:새 베이스 생성하기": false,
-      "obsidian-git:Open Git source control": false
+      "bases:새 베이스 생성하기": false
     }
   },
   "active": "6119457ccfe83d63",
   "lastOpenFiles": [
-    "TIL/GIT - 버전 관리 시스템의 탄생과 진화.md",
+    "2026.01/06. HTTP Request_Response.md",
+    "2026.01/05. HTTP.md",
+    "2026.01/03. IP.md",
+    "2026.01/02. DNS.md",
+    "2026.01/01. 클라이언트 - 서버 모델.md",
     "README.md",
+    "10.GIT/GIT - 버전 관리 시스템의 탄생과 진화.md",
+    "2025.12/02. 일급 객체(First-class Citizen)로서의 함수와 데코레이터(Decorator).md",
+    "2025.12/03.  파이프라인.md",
+    "2025.12/01. GIT - 버전 관리 시스템의 탄생과 진화.md",
+    "2026.01/07.HTTP Header_Body.md",
+    "2026.01/04. PORT.md",
+    "10.GIT/GIT - 버전 관리 시스템의 탄생과 진화 GPT.md",
+    "12.WEB",
+    "11.Python",
+    "10.GIT",
+    "2025.12",
+    "2026.01",
     "템플릿/callout.md",
     "GIT.md",
     "Global callout.css",
